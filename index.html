@@ -1,0 +1,70 @@
+ 
+<html>
+  <head>
+    <title>Gesture Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class="btn btn-warning heading p">Hand Gesture Website
+        <br>
+        <span>&#9994</span>
+        <span>&#9995</span>
+        <span>&#128077</span>
+        <span>&#128078</span>
+        <span>&#129304</span>
+      </h3>
+
+    <br><br>
+<br>
+      <p style="font-size: 22px;" class="p btn-warning">Take your selfie to generate emoji
+      </p>
+      <br>
+
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label class="p btn-warning">Webcam View - </label>
+        <div id="camera"></div>
+        <br><br>
+        <button onclick="take_snapshot()" class="btn btn-danger text-light capture_image">Capture Image 📷</button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label style="font-size:20px;" class="prediction btn-warning p" >prediction 1️⃣</label>
+        <p class="emotion_name" id="result_emotion_name">
+        </p>
+        <p class="emoji" id="update_emoji"></p>
+        
+        <br>
+        <label style="font-size:20px" class="prediction p btn-warning">prediction 2️⃣</label>
+        <p class="emotion_name" id="result_emotion_name_2">
+        </p>
+        <p class="emoji" id="update_emoji_2"></p>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label class="p btn-warning">Result - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="check()" class="btn btn-danger text-light capture_image">Predict Emotion 🔮</button>
+      </div>
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
